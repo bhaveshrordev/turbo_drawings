@@ -1,0 +1,11 @@
+<h1>Drawings</h1>
+
+<%= turbo_frame_tag 'drawing_canvas' do %>
+  <canvas id="canvas" width="400" height="400" style="border:1px solid #000;"></canvas>
+<% end %>
+
+<h2>Select Color:</h2>
+<%= form_tag(change_color_path, method: :post) do %>
+  <%= select_tag(:color, options_for_select(['Red', 'Green', 'Blue'])) %>
+  <%= submit_tag 'Change Color' %>
+<% end %>
