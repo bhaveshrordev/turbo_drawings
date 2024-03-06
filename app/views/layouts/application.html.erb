@@ -13,6 +13,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header><%= Time.zone.now %></header>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
