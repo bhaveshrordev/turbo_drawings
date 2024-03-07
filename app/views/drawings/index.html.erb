@@ -5,7 +5,9 @@
 <% end %>
 
 <h2>Select Color:</h2>
-<%= form_tag(change_color_path, method: :post) do %>
-  <%= select_tag(:color, options_for_select(['Red', 'Green', 'Blue'])) %>
-  <%= submit_tag 'Change Color' %>
-<% end %>
+<div data-controller="dropdown">
+  <%= form_tag(change_color_path, method: :post) do %>
+    <%= select_tag(:color, options_for_select(['Red', 'Green', 'Blue'])) %>
+    <%= submit_tag 'Change Color' %>
+  <% end %>
+</div>
