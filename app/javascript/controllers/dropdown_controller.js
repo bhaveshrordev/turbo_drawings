@@ -4,9 +4,14 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   
   static targets = ["dropdownContent", "openButton", "closeButton"]
+  static values = { open: Boolean }
 
   connect() {
-    this.closeDropdown()
+    if (this.openValue){
+      this.openDropdown()
+    } else {
+      this.closeDropdown()
+    }
   }
 
   toggleDropdown() {
