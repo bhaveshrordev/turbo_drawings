@@ -1,0 +1,14 @@
+<!-- app/views/rooms/show.html.erb -->
+<h1><%= @room.name %></h1>
+
+<p>
+  <strong>Dominant Color:</strong>
+  <%= @room.dominant_color %>
+</p>
+
+<p>
+  <strong>Complementary Color:</strong>
+  <%= @room.complementary_color %>
+</p>
+
+<%= image_tag @room.image.variant(resize_to_limit: [500, 500]) %>

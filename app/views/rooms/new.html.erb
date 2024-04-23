@@ -1,0 +1,16 @@
+<!-- app/views/rooms/new.html.erb -->
+<h1>Upload Room Image</h1>
+
+<%= form_with model: @room do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <%= form.submit %>
+<% end %>
